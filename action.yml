@@ -1,6 +1,8 @@
 name: 'ServerChan · Server酱通知'
 description: 'Send wechat notice via serverchan'
 author: 'EasyChen'
+icon: 'message-square'
+color: 'blue'
 inputs:
   sendkey: 
     required: true
