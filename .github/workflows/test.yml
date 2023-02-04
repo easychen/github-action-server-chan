@@ -10,8 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Get current time
+          uses: josStorer/get-current-time@v2.0.2
+          id: current-time
+          with:
+            format: YYYYMMDD-HH
+            utcOffset: "+08:00"
       - uses: ./
         with:
           sendkey: ${{ secrets.sendkey }}
-          title: "server酱Action更新啦"
+          title: "server酱Action更新啦 ${{ steps.current-time.outputs.formattedTime }}"
 
