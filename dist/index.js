@@ -45,20 +45,21 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const axios_1 = __importDefault(__nccwpck_require__(8757));
 function run() {
-    var _a;
+    var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
         try {
             const sendkey = core.getInput('sendkey');
             const title = core.getInput('title');
             const desp = (_a = core.getInput('desp')) !== null && _a !== void 0 ? _a : false;
             const url = `https://sctapi.ftqq.com/${sendkey}.send`;
-            // send request via form
+            // send request via urlencoded
             let params = new URLSearchParams();
-            params.append(title, title);
+            params.append('title', title);
             if (desp)
-                params.append(desp, desp);
+                params.append('desp', desp);
+            axios_1.default.defaults.timeout = 10000;
             const ret = yield axios_1.default.post(url, params);
-            console.log(ret, ret.data);
+            return (_b = ret.data) !== null && _b !== void 0 ? _b : false;
         }
         catch (error) {
             if (error instanceof Error)
