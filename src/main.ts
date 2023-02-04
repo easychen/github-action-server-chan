@@ -13,6 +13,7 @@ async function run(): Promise<void> {
     params.append( 'title', title );
     if( desp ) params.append( 'desp', desp);
 
+    axios.defaults.timeout = 10000;
     const ret = await axios.post( url  , params );
     return ret.data??false;
 
