@@ -1,11 +1,16 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'ServerChan · Server酱通知'
+description: 'Send wechat notice via serverchan'
+author: 'EasyChen'
 inputs:
-  milliseconds: # change this
+  sendkey: 
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'SendKey 可在 sct.ftqq.com 免费申请'
+  title:
+    required: true
+    description: '消息标题'
+  desp:
+    description: '消息详细说明，支持markdown'
+    
 runs:
   using: 'node16'
   main: 'dist/index.js'

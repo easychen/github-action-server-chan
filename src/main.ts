@@ -1,16 +1,22 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+import axios from 'axios';
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const sendkey:string = core.getInput('sendkey');
+    const title:string = core.getInput('title');
+    const desp:string|boolean = core.getInput('desp')??false;
+    const url:string = `https://sctapi.ftqq.com/${sendkey}.send`;
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    // send request via form
+    let params = new URLSearchParams();
+    params.append( title, title );
+    if( desp ) params.append( desp, desp);
 
-    core.setOutput('time', new Date().toTimeString())
+    const ret = await axios.post( url  , params );
+    console.log( ret, ret.data );
+
+
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }
