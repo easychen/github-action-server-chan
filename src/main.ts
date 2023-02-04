@@ -8,13 +8,13 @@ async function run(): Promise<void> {
     const desp:string|boolean = core.getInput('desp')??false;
     const url:string = `https://sctapi.ftqq.com/${sendkey}.send`;
 
-    // send request via form
+    // send request via urlencoded
     let params = new URLSearchParams();
-    params.append( title, title );
-    if( desp ) params.append( desp, desp);
+    params.append( 'title', title );
+    if( desp ) params.append( 'desp', desp);
 
     const ret = await axios.post( url  , params );
-    console.log( ret, ret.data );
+    return ret.data??false;
 
 
   } catch (error) {
