@@ -12,10 +12,10 @@
 
 ```yml
 - uses: josStorer/get-current-time@v2.0.2
-        id: current-time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "+08:00"
+  id: current-time
+  with:
+    format: YYYYMMDD-HH
+    utcOffset: "+08:00"
 - uses: easychen/github-action-server-chan@v1.0.0
   with:
     sendkey: ${{ secrets.sendkey }}
