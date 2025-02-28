@@ -771,10 +771,10 @@
   resolved "https://registry.npmmirror.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/node@*", "@types/node@^22.13.5":
-  version "22.13.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.5.tgz#23add1d71acddab2c6a4d31db89c0f98d330b511"
-  integrity sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==
+"@types/node@*", "@types/node@^22.13.6":
+  version "22.13.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.13.6.tgz#9e6ffd5239524e8432c0bca2de80311e068dad62"
+  integrity sha512-GYmF65GI7417CpZXsEXMjT8goQQDnpRnJnDw6jIYa+le3V/lMazPZ4vZmK1B/9R17fh2VLr2zuy9d/h5xgrLAg==
   dependencies:
     undici-types "~6.20.0"
 
