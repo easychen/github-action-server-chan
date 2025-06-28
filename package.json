@@ -29,7 +29,7 @@
     "axios": "^1.10.0"
   },
   "devDependencies": {
-    "@types/node": "^24.0.4",
+    "@types/node": "^24.0.6",
     "@typescript-eslint/parser": "^8.35.0",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.30.0",
